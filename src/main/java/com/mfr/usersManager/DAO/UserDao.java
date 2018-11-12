@@ -1,4 +1,4 @@
-package com.mfr.usersManager.Dao;
+package com.mfr.usersManager.DAO;
 
 import com.mfr.usersManager.Entity.User;
 import org.bson.types.ObjectId;

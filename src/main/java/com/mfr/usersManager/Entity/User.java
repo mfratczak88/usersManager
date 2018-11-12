@@ -1,5 +1,6 @@
 package com.mfr.usersManager.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -13,8 +14,8 @@ public class User {
     private String name;
     private String surname;
     private String email;
+    @JsonIgnore
     private String password;
-    private boolean verified;
 
     public User() {
     }
@@ -25,7 +26,6 @@ public class User {
         this.surname = surname;
         this.email = email;
         this.password = password;
-        this.verified = verified;
     }
 
     public String get_id() {
@@ -36,13 +36,6 @@ public class User {
         this._id = _id;
     }
 
-    public boolean isVerified() {
-        return verified;
-    }
-
-    public void setVerified(boolean verified) {
-        this.verified = verified;
-    }
 
     public String getName() {
         return name;
