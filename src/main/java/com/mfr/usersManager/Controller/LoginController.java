@@ -61,7 +61,7 @@ public class LoginController {
 
     private boolean doesPasswordMatch(String password, String passwordHash){
         try{
-            return (!passwordUtil.checkPassword(password,passwordHash));
+            return passwordUtil.checkPassword(password,passwordHash);
         } catch (Exception e){
             return false;
         }
